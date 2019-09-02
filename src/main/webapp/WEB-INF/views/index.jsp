@@ -15,10 +15,11 @@
 <body>
 
 <%@include file="header.jsp" %>
+
 <section class="stats">
     <div class="container container--85">
         <div class="stats--item">
-            <em>13</em>
+            <em>${bags}</em>
 
             <h3>Oddanych worków</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
@@ -26,7 +27,7 @@
         </div>
 
         <div class="stats--item">
-            <em>5</em>
+            <em>${institutions}</em>
             <h3>Wspartych organizacji</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
                 quam.</p>
@@ -84,30 +85,34 @@
             Możesz sprawdzić czym się zajmują.</p>
 
         <ul class="help--slides-items">
-            <li>
-                <div class="col">
-                    <div class="title">Fundacja "Dbam o Zdrowie"</div>
-                    <div class="subtitle">Cel i misja: Pomoc dzieciom z ubogich rodzin.</div>
-                </div>
-
-                <div class="col">
-                    <div class="title">Fundacja "A kogo"</div>
-                    <div class="subtitle">Cel i misja: Pomoc wybudzaniu dzieci ze śpiączki.</div>
-                </div>
-            </li>
+            <c:forEach items="${listInstitutions}" var="institution" varStatus="status" step="2">
 
             <li>
                 <div class="col">
-                    <div class="title">Fundacja “Dla dzieci"</div>
-                    <div class="subtitle">Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</div>
-                </div>
-                <div class="col">
-                    <div class="title">Fundacja “Bez domu”</div>
-                    <div class="subtitle">Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania</div>
+                    <div class="title">Fundacja ${institution.name}</div>
+                    <div class="subtitle">Cel i misja: ${institution.description}</div>
                 </div>
 
+
+                <div class="col">
+                    <div class="title">Fundacja ${institution.name}</div>
+                    <div class="subtitle">Cel i misja: ${institution.description}</div>
+                </div>
             </li>
 
+
+            <%--<li>--%>
+                <%--<div class="col">--%>
+                    <%--<div class="title">Fundacja ${institution.name}</div>--%>
+                    <%--<div class="subtitle">Cel i misja: ${institution.description}</div>--%>
+                <%--</div>--%>
+                <%--<div class="col">--%>
+                    <%--<div class="title">Fundacja a ${institution.name}</div>--%>
+                    <%--<div class="subtitle">Cel i misja: ${institution.description}</div>--%>
+                <%--</div>--%>
+
+            <%--</li>--%>
+            </c:forEach>
         </ul>
     </div>
 
