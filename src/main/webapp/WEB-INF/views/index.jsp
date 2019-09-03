@@ -85,34 +85,24 @@
             Możesz sprawdzić czym się zajmują.</p>
 
         <ul class="help--slides-items">
-            <c:forEach items="${listInstitutions}" var="institution" varStatus="status" step="2">
+            <c:forEach var="index" begin="0" end="${listInstitutions.size() - 1}" step="2">
 
             <li>
                 <div class="col">
-                    <div class="title">Fundacja ${institution.name}</div>
-                    <div class="subtitle">Cel i misja: ${institution.description}</div>
+                    <div class="title">Fundacja ${listInstitutions.get(index).getName()}</div>
+                    <div class="subtitle">Cel i misja: ${listInstitutions.get(index).getDescription()}</div>
                 </div>
 
-
+                <c:if test="${index < ( listInstitutions.size() - 1)}">
                 <div class="col">
-                    <div class="title">Fundacja ${institution.name}</div>
-                    <div class="subtitle">Cel i misja: ${institution.description}</div>
+                    <div class="title">Fundacja ${listInstitutions.get(index + 1).getName()}</div>
+                    <div class="subtitle">Cel i misja: ${listInstitutions.get(index + 1).getDescription()}</div>
                 </div>
+                </c:if>
             </li>
-
-
-            <%--<li>--%>
-                <%--<div class="col">--%>
-                    <%--<div class="title">Fundacja ${institution.name}</div>--%>
-                    <%--<div class="subtitle">Cel i misja: ${institution.description}</div>--%>
-                <%--</div>--%>
-                <%--<div class="col">--%>
-                    <%--<div class="title">Fundacja a ${institution.name}</div>--%>
-                    <%--<div class="subtitle">Cel i misja: ${institution.description}</div>--%>
-                <%--</div>--%>
-
-            <%--</li>--%>
             </c:forEach>
+
+
         </ul>
     </div>
 

@@ -1,7 +1,10 @@
 package pl.coderslab.charity.entity;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.FutureOrPresent;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Calendar;
@@ -28,8 +31,11 @@ public class Donation {
 
     private String zipCode;
 
+    @FutureOrPresent
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate pickUpDate;
 
+    @DateTimeFormat
     private LocalTime pickUpTime;
 
     private String pickUpComment;
