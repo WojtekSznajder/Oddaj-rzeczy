@@ -27,7 +27,7 @@ public class DonationController {
     private InstitutionRepository institutionRepository;
 
 
-    public DonationController(CategoryRepository categoryRepository,DonationRepository donationRepository, InstitutionRepository institutionRepository) {
+    public DonationController(CategoryRepository categoryRepository, DonationRepository donationRepository, InstitutionRepository institutionRepository) {
         this.categoryRepository = categoryRepository;
         this.donationRepository = donationRepository;
         this.institutionRepository = institutionRepository;
@@ -46,22 +46,11 @@ public class DonationController {
 
 
     @PostMapping("")
-    public void postForm(@ModelAttribute Donation donation, Model model){
+    public void postForm(@ModelAttribute Donation donation, Model model) {
         donationRepository.save(donation);
+
     }
 
 
-//    @ModelAttribute("categories")
-//    public Collection<Category> categories() {
-//        List<Category> categories = categoryRepository.findAll();
-//        return categories;
-//    }
-//
-//
-//    @ModelAttribute("institutions")
-//    public  Collection<Institution> institutions(){
-//        List<Institution> institutions = institutionRepository.findAll();
-//        return institutions;
-//    }
 
 }

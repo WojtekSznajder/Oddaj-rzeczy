@@ -1,25 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>" />
+    <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
 </head>
 <body>
-<header>
+
+
+
+<header class="header--form-page">
     <nav class="container container--70">
         <ul class="nav--actions">
-            <li><a href="#">Zaloguj</a></li>
-            <li class="highlighted"><a href="#">Załóż konto</a></li>
+            <li class="logged-user">
+                Witaj Agata
+                <ul class="dropdown">
+                    <li><a href="#">Profil</a></li>
+                    <li><a href="#">Ustawienia</a></li>
+                    <li><a href="#">Moje zbiórki</a></li>
+                    <li><a href="#">Wyloguj</a></li>
+                </ul>
+            </li>
         </ul>
 
         <ul>
@@ -32,35 +42,18 @@
     </nav>
 </header>
 
-<section class="login-page">
-    <h2>Załóż konto</h2>
-    <form:form modelAttribute="register" method="POST">
-        <div class="form-group">
-            <form:input path="email" type="email" name="email" placeholder="Email" />
-        </div>
-        <div class="form-group">
-            <form:input path="password" type="password" name="password" placeholder="Hasło" />
-        </div>
-        <div class="form-group">
-            <form:input path="name" type="name" name="name" placeholder="Imię" />
-        </div>
-        <div class="form-group">
-            <form:input path="surname" type="surname" name="surname" placeholder="Nazwisko" />
-        </div>
+    <div class="slogan container container--70">
+        <h2>
+            Dziękujemy za przesłanie formularza.
+        </h2>
+    </div>
 
-
-        <div class="form-group form-group--buttons">
-            <a href="login.html" class="btn btn--without-border">Zaloguj się</a>
-            <button class="btn" type="submit">Załóż konto</button>
-        </div>
-    </form:form>
-</section>
 
 <footer>
     <div class="contact">
         <h2>Skontaktuj się z nami</h2>
         <h3>Formularz kontaktowy</h3>
-        <form>
+        <form class="form--contact">
             <div class="form-group form-group--50">
                 <input type="text" name="name" placeholder="Imię" />
             </div>
@@ -69,11 +62,11 @@
             </div>
 
             <div class="form-group">
-            <textarea
-                    name="message"
-                    placeholder="Wiadomość"
-                    rows="1"
-            ></textarea>
+    <textarea
+            name="message"
+            placeholder="Wiadomość"
+            rows="1"
+    ></textarea>
             </div>
 
             <button class="btn" type="submit">Wyślij</button>
@@ -91,5 +84,7 @@
         </div>
     </div>
 </footer>
+
+<script src="/resources/js/app.js"></script>
 </body>
 </html>
