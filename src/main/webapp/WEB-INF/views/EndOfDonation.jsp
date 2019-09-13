@@ -17,7 +17,6 @@
 <body>
 
 
-
 <header class="header--form-page">
     <nav class="container container--70">
         <ul class="nav--actions">
@@ -40,13 +39,40 @@
             <li><a href="index.html#contact" class="btn btn--without-border">Kontakt</a></li>
         </ul>
     </nav>
+    <div class="slogan container container--90">
+        <div class="slogan--item">
+            <h1>
+                Oddaj rzeczy, których już nie chcesz<br/>
+                <span class="uppercase">potrzebującym</span>
+            </h1>
+
+            <div class="slogan--steps">
+                <div class="slogan--steps-title">Wystarczą 4 proste kroki:</div>
+                <ul class="slogan--steps-boxes">
+                    <li>
+                        <div><em>1</em><span>Wybierz rzeczy</span></div>
+                    </li>
+                    <li>
+                        <div><em>2</em><span>Spakuj je w worki</span></div>
+                    </li>
+                    <li>
+                        <div><em>3</em><span>Wybierz fundację</span></div>
+                    </li>
+                    <li>
+                        <div><em>4</em><span>Zamów kuriera</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </header>
 
-    <div class="slogan container container--70">
-        <h2>
-            Dziękujemy za przesłanie formularza.
-        </h2>
-    </div>
+
+<div class="slogan container container--70">
+    <h2>
+        Dziękujemy za przesłanie formularza.
+    </h2>
+</div>
 
 
 <footer>
@@ -55,10 +81,10 @@
         <h3>Formularz kontaktowy</h3>
         <form class="form--contact">
             <div class="form-group form-group--50">
-                <input type="text" name="name" placeholder="Imię" />
+                <input type="text" name="name" placeholder="Imię"/>
             </div>
             <div class="form-group form-group--50">
-                <input type="text" name="surname" placeholder="Nazwisko" />
+                <input type="text" name="surname" placeholder="Nazwisko"/>
             </div>
 
             <div class="form-group">

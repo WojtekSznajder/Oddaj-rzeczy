@@ -5,6 +5,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 
+
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -33,27 +35,22 @@
 </header>
 
 <section class="login-page">
-    <h2>Załóż konto</h2>
-    <form:form modelAttribute="user" method="POST">
+    <h2>Zaloguj się</h2>
+    <form:form modelAttribute="login" method="POST" action="/login">
         <div class="form-group">
             <form:input path="email" type="email" name="email" placeholder="Email" />
         </div>
         <div class="form-group">
             <form:input path="password" type="password" name="password" placeholder="Hasło" />
+            <a href="#" class="btn btn--small btn--without-border reset-password">Przypomnij hasło</a>
         </div>
-        <div class="form-group">
-            <form:input path="name" type="name" name="name" placeholder="Imię" />
-        </div>
-        <div class="form-group">
-            <form:input path="surname" type="surname" name="surname" placeholder="Nazwisko" />
-        </div>
-
 
         <div class="form-group form-group--buttons">
-            <a href="/login" class="btn btn--without-border">Zaloguj się</a>
-            <button class="btn" type="submit">Załóż konto</button>
+            <a href="/register" class="btn btn--without-border">Załóż konto</a>
+            <button class="btn" type="submit">Zaloguj się</button>
         </div>
     </form:form>
+
 </section>
 
 <footer>
@@ -69,11 +66,7 @@
             </div>
 
             <div class="form-group">
-            <textarea
-                    name="message"
-                    placeholder="Wiadomość"
-                    rows="1"
-            ></textarea>
+                <textarea name="message" placeholder="Wiadomość" rows="1"></textarea>
             </div>
 
             <button class="btn" type="submit">Wyślij</button>
@@ -82,12 +75,8 @@
     <div class="bottom-line">
         <span class="bottom-line--copy">Copyright &copy; 2018</span>
         <div class="bottom-line--icons">
-            <a href="#" class="btn btn--small"
-            ><img src="images/icon-facebook.svg"
-            /></a>
-            <a href="#" class="btn btn--small"
-            ><img src="images/icon-instagram.svg"
-            /></a>
+            <a href="#" class="btn btn--small"><img src="images/icon-facebook.svg"/></a>
+            <a href="#" class="btn btn--small"><img src="images/icon-instagram.svg"/></a>
         </div>
     </div>
 </footer>

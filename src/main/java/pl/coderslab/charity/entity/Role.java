@@ -2,6 +2,7 @@ package pl.coderslab.charity.entity;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "role")
@@ -9,8 +10,11 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "role_id")
     private int id;
 
+    @Column(name = "role")
+    @NotNull
     private String role;
 
     public int getId() {

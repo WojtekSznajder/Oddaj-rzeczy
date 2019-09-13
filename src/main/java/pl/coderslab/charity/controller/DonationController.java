@@ -46,8 +46,9 @@ public class DonationController {
 
 
     @PostMapping("")
-    public void postForm(@ModelAttribute Donation donation, Model model) {
+    public String postForm(@ModelAttribute Donation donation, Model model) {
         donationRepository.save(donation);
+        return "EndOfDonation";
 
     }
 

@@ -4,6 +4,7 @@ package pl.coderslab.charity.entity;
 import lombok.ToString;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 @Entity
@@ -12,16 +13,27 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id")
     private Long id;
 
+    @Column(name = "email")
+    @NotNull
     private String email;
 
+    @Column(name = "password")
+    @NotNull
     private String password;
 
+    @Column(name = "name")
+    @NotNull
     private String name;
 
+    @Column(name = "surname")
+    @NotNull
     private String surname;
 
+    @Column(name = "active")
+    @NotNull
     private int active;
 
     @ManyToMany(cascade = CascadeType.ALL)

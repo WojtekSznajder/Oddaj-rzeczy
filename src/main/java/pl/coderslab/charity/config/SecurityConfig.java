@@ -1,7 +1,5 @@
 package pl.coderslab.charity.config;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +11,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+
+import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
@@ -44,9 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/index").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/register").permitAll()
-                .antMatchers("/adduser").permitAll()
-                .antMatchers("/activatelink/**").permitAll()
-//		.antMatchers("/admin").hasAuthority("ROLE_ADMIN")
+                           	.antMatchers("/admin").hasAuthority("ROLE_ADMIN")
                 .anyRequest().authenticated()
                 .and().csrf().disable()
                 .formLogin()
