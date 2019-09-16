@@ -219,7 +219,7 @@
                 <button type="button" class="btn next-step">Dalej</button>
             </div>
         </div>
-
+            
 
         <!-- STEP 6 -->
         <div data-step="5">

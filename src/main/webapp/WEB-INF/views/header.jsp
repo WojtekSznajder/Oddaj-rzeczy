@@ -25,10 +25,11 @@
 
         <ul>
             <li><a href="#" class="btn btn--without-border active">Start</a></li>
-            <li><a href="#" class="btn btn--without-border">O co chodzi?</a></li>
-            <li><a href="#" class="btn btn--without-border">O nas</a></li>
-            <li><a href="#" class="btn btn--without-border">Fundacje i organizacje</a></li>
-            <li><a href="#" class="btn btn--without-border">Kontakt</a></li>
+            <li><a href="/donation" class="btn btn--without-border">Dotacja</a></li>
+            <li><a href="#whatisallabout" class="btn btn--without-border">O co chodzi?</a></li>
+            <li><a href="#aboutus" class="btn btn--without-border">O nas</a></li>
+            <li><a href="#institutions" class="btn btn--without-border">Fundacje i organizacje</a></li>
+            <li><a href="#contact" class="btn btn--without-border">Kontakt</a></li>
         </ul>
     </nav>
 
